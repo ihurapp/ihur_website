@@ -8,7 +8,10 @@
         body, html {
             height: 100%;
             margin: 0;
-            background: url('favicon.png') center/cover no-repeat;
+            background-image: url('favicon.png'); /* Path to your background image */
+            background-size: cover; /* Scale the image to cover the entire background */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-position: center; /* Center the image */
             font-family: Lato, "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
             display: flex;
             justify-content: center;
@@ -21,7 +24,6 @@
             align-items: center;
             width: 100%;
             height: 100%;
-            position: relative;
         }
 
         .apple-spinner {
@@ -36,7 +38,7 @@
             width: 12px;
             height: 12px;
             margin: 2px;
-            background-color: #3498db;
+            background-color: #3498db; /* Blue color */
             border-radius: 50%;
             animation: apple-spinner 1.2s linear infinite;
         }
@@ -65,16 +67,6 @@
             display: none;
             width: 100%;
             height: 100%;
-            position: relative;
-        }
-
-        .logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 18px;
-            color: white;
-            font-weight: bold;
         }
 
         .footer {
@@ -109,7 +101,7 @@
         </div>
     </div>
     <div class="content">
-        <div class="logo">ihur.com<sup>&reg;</sup></div>
+        <!-- Your main content goes here -->
         <div class="footer">
             ihur.com
             <div class="trademark">&reg;</div>
