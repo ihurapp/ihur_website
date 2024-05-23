@@ -16,6 +16,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            width: 100px; /* Adjust as needed */
+            height: auto;
         }
 
         .loader-container {
@@ -88,6 +97,7 @@
     </style>
 </head>
 <body>
+    <img src="ihur.png" alt="ihur logo" class="logo">
     <div class="loader-container">
         <div class="apple-spinner">
             <div></div>
