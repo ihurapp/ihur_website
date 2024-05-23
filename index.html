@@ -91,6 +91,16 @@
             vertical-align: super;
         }
 
+        .button-container {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .text-button {
             background: none;
             border: none;
@@ -101,9 +111,6 @@
             font-weight: bold;
             text-decoration: none;
             font-size: 18px;
-            position: fixed;
-            bottom: 10px;
-            right: 120px; /* Adjust this value to align properly */
         }
 
         .dialog {
@@ -173,11 +180,13 @@
     </div>
     <div class="content">
         <!-- Main content goes here -->
-        <button class="text-button" onclick="showAboutDialog()">About</button>
     </div>
     <div class="footer">
         ihur.com
         <div class="trademark">&reg;</div>
+    </div>
+    <div class="button-container">
+        <button class="text-button" onclick="showAboutDialog()">About</button>
     </div>
     <div class="dialog-overlay"></div>
     <div class="dialog">
