@@ -16,6 +16,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative; /* Make the body relative to position the logo */
+        }
+
+        .logo {
+            position: absolute; /* Position the logo absolutely */
+            top: 10px; /* Adjust the distance from the top */
+            right: 10px; /* Adjust the distance from the right */
         }
 
         .loader-container {
@@ -88,6 +95,7 @@
     </style>
 </head>
 <body>
+    <img src="ihur.png" alt="ihur logo" class="logo"> <!-- Add the logo image -->
     <div class="loader-container">
         <div class="apple-spinner">
             <div></div>
