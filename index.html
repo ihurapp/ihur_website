@@ -3,36 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming soon!</title>
+    <title>Loading...</title>
     <style>
-        html,
-        body {
-            width: 100%;
+        body, html {
             height: 100%;
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-        }
-
-        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-image: url('favicon.png'); /* Path to your background image */
             background-size: cover; /* Scale the image to cover the entire background */
             background-repeat: no-repeat; /* Prevent the image from repeating */
             background-position: center; /* Center the image */
             font-family: Lato, "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
-            display: flex;
-            justify-content: flex-end; /* Align content to the bottom right */
-            align-items: flex-end; /* Align content to the bottom right */
         }
 
-        .footer-text {
-            color: white; /* Text color */
-            padding: 10px; /* Add some padding */
-            font-size: 1em; /* Font size */
-            font-weight: 600; /* Make text a little bold */
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 18px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer .trademark {
+            margin-left: 5px;
+            font-size: 12px;
+            vertical-align: super;
         }
     </style>
 </head>
 <body>
-    <div class="footer-text">ihur.com<sup>®</sup></div>
+    <div class="loader"></div>
+    <div class="footer">
+        ihur.com
+        <div class="trademark">&reg;</div>
+    </div>
 </body>
 </html>
