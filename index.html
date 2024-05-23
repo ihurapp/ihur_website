@@ -71,6 +71,7 @@
             justify-content: center;
             align-items: center;
             color: white;
+            position: relative;
         }
 
         .footer {
@@ -96,18 +97,17 @@
             text-align: center;
         }
 
-        .button {
-            background-color: #3498db;
+        .text-button {
+            background: none;
             border: none;
             color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
+            padding: 0;
+            font: inherit;
             cursor: pointer;
-            border-radius: 8px;
+            text-decoration: underline;
+            position: absolute;
+            bottom: 20px;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -126,7 +126,7 @@
     </div>
     <div class="content">
         <!-- Main content goes here -->
-        <button class="button" onclick="showAbout()">About</button>
+        <button class="text-button" onclick="showAbout()">About Us</button>
         <div class="footer">
             ihur.com
             <div class="trademark">&reg;</div>
@@ -136,7 +136,7 @@
         <div class="about-message">
             Welcome to ihur.com! This is where we share insightful information and connect with our community.
         </div>
-        <button class="button" onclick="showContent()">Back</button>
+        <button class="text-button" onclick="showContent()">Back</button>
     </div>
     <script>
         window.addEventListener('load', function() {
