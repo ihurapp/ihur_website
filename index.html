@@ -16,6 +16,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
         .loader-container {
@@ -71,11 +72,10 @@
             justify-content: center;
             align-items: center;
             color: white;
-            position: relative;
         }
 
         .footer {
-            position: absolute;
+            position: fixed;
             bottom: 10px;
             right: 10px;
             font-size: 18px;
@@ -171,10 +171,10 @@
     <div class="content">
         <!-- Main content goes here -->
         <button class="text-button" onclick="showAboutDialog()">About Us</button>
-        <div class="footer">
-            ihur.com
-            <div class="trademark">&reg;</div>
-        </div>
+    </div>
+    <div class="footer">
+        ihur.com
+        <div class="trademark">&reg;</div>
     </div>
     <div class="dialog-overlay"></div>
     <div class="dialog">
