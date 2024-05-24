@@ -70,12 +70,14 @@
             height: 100%;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Align items to the left */
+            padding-left: 40px; /* Adjust left padding */
             color: white;
-            position: absolute; /* Adjust position */
-            top: 0; /* Adjust position */
-            right: 0; /* Adjust position */
-            padding: 20px; /* Adjust spacing */
+        }
+
+        .text-container {
+            max-width: 500px; /* Adjust the max-width as needed */
+            text-align: left; /* Align text to the left */
         }
 
         .footer {
