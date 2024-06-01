@@ -8,6 +8,7 @@
         body, html {
             height: 100%;
             margin: 0;
+            padding: 0; /* Ensure no padding */
             background-image: url('favicon.png'); /* Path to your background image */
             background-size: cover; /* Scale the image to cover the entire background */
             background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -17,6 +18,7 @@
             justify-content: center;
             align-items: center;
             position: relative;
+            overflow: hidden; /* Hide overflow to prevent scroll bars */
         }
 
         .loader-container {
@@ -96,6 +98,8 @@
             bottom: 10px;
             right: 10px;
             z-index: 1000;
+            margin: 0; /* Remove any default margin */
+            padding: 0; /* Remove any default padding */
         }
     </style>
 </head>
