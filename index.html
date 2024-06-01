@@ -98,8 +98,14 @@
             bottom: 10px;
             right: 10px;
             z-index: 1000;
-            margin: 0; /* Remove any default margin */
-            padding: 0; /* Remove any default padding */
+            width: 200px; /* Set a fixed width for the widget */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        @media (max-width: 600px) {
+            .gfm-embed {
+                width: 150px; /* Reduce size on small screens */
+            }
         }
     </style>
 </head>
