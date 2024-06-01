@@ -9,6 +9,7 @@
             height: 100%;
             margin: 0;
             padding: 0; /* Ensure no padding */
+            background-color: #3498db; /* Blue color as a fallback for mobile */
             background-image: url('favicon.png'); /* Path to your background image */
             background-size: cover; /* Scale the image to cover the entire background */
             background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -41,7 +42,7 @@
             width: 12px;
             height: 12px;
             margin: 2px;
-            background-color: #3498db; /* Blue color */
+            background-color: #fff; /* White color for contrast */
             border-radius: 50%;
             animation: apple-spinner 1.2s linear infinite;
         }
@@ -107,6 +108,21 @@
         .gfm-embed {
             width: 100%;
             height: auto;
+        }
+
+        @media (max-width: 767px) {
+            body {
+                background-image: none; /* Remove background image for mobile */
+            }
+            .gfm-container {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                bottom: auto;
+                right: auto;
+                max-width: 90%;
+                width: 100%;
+            }
         }
     </style>
 </head>
