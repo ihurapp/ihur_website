@@ -9,7 +9,11 @@
             height: 100%;
             margin: 0;
             padding: 0; /* Ensure no padding */
-            background-color: white; /* White color until everything loads */
+            background-color: #3498db; /* Blue color as a fallback for mobile */
+            background-image: url('favicon.png'); /* Path to your background image */
+            background-size: cover; /* Scale the image to cover the entire background */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-position: center; /* Center the image */
             font-family: Lato, "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
             display: flex;
             justify-content: center;
@@ -38,7 +42,7 @@
             width: 12px;
             height: 12px;
             margin: 2px;
-            background-color: #3498db; /* Blue color */
+            background-color: #fff; /* White color for contrast */
             border-radius: 50%;
             animation: apple-spinner 1.2s linear infinite;
         }
@@ -71,10 +75,6 @@
             justify-content: center;
             align-items: center;
             color: white;
-            background-image: url('favicon.png'); /* Path to your background image */
-            background-size: cover; /* Scale the image to cover the entire background */
-            background-repeat: no-repeat; /* Prevent the image from repeating */
-            background-position: center; /* Center the image */
         }
 
         .footer {
@@ -111,9 +111,8 @@
         }
 
         @media (max-width: 767px) {
-            .content {
+            body {
                 background-image: none; /* Remove background image for mobile */
-                background-color: white; /* Keep white background for mobile */
             }
             .gfm-container {
                 top: 50%;
