@@ -105,21 +105,14 @@
         }
 
         .gfm-embed {
-            width: 100%;
-            height: auto;
+            width: 300px; /* Set a default width */
+            height: auto; /* Maintain aspect ratio */
         }
 
         /* Media query for mobile screens */
-        @media only screen and (max-width: 600px) {
-            .gfm-container {
-                bottom: 10px;
-                right: 10px;
-                padding: 5px;
-            }
-
+        @media screen and (max-width: 768px) {
             .gfm-embed {
-                max-width: 200px;
-                height: auto;
+                width: 200px; /* Smaller width for mobile screens */
             }
         }
     </style>
