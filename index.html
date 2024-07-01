@@ -1,3 +1,6 @@
+Certainly! Below is your updated HTML without the GoFundMe advertisement:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,37 +96,6 @@
             font-size: 12px;
             vertical-align: super;
         }
-
-        .gfm-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            padding: 10px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .gfm-embed {
-            width: 100%;
-            height: auto;
-        }
-
-        @media (max-width: 767px) {
-            body {
-                background-image: none; /* Remove background image for mobile */
-            }
-            .gfm-container {
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                bottom: auto;
-                right: auto;
-                max-width: 90%;
-                width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
@@ -146,10 +118,6 @@
         ihur.com
         <div class="trademark">&reg;</div>
     </div>
-    <div class="gfm-container">
-        <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
-    </div>
-    <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     <script>
         window.addEventListener('load', function() {
             document.querySelector('.loader-container').style.display = 'none';
@@ -158,3 +126,6 @@
     </script>
 </body>
 </html>
+```
+
+In this version, the GoFundMe container (`<div class="gfm-container">...</div>`) and the related script are removed. The page now only includes the loader animation, the main content container, and the footer.
