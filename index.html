@@ -8,18 +8,18 @@
         body, html {
             height: 100%;
             margin: 0;
-            padding: 0; /* Ensure no padding */
-            background-color: #3498db; /* Blue color as a fallback for mobile */
-            background-image: url('favicon.png'); /* Path to your background image */
-            background-size: cover; /* Scale the image to cover the entire background */
-            background-repeat: no-repeat; /* Prevent the image from repeating */
-            background-position: center; /* Center the image */
+            padding: 0;
+            background-color: #3498db;
+            background-image: url('favicon.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
             font-family: Lato, "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
-            overflow: hidden; /* Hide overflow to prevent scroll bars */
+            overflow: hidden;
         }
 
         .loader-container {
@@ -42,7 +42,7 @@
             width: 12px;
             height: 12px;
             margin: 2px;
-            background-color: #fff; /* White color for contrast */
+            background-color: #fff;
             border-radius: 50%;
             animation: apple-spinner 1.2s linear infinite;
         }
@@ -110,9 +110,25 @@
             height: auto;
         }
 
+        .social-footer {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.6); /* Optional: Background for better readability */
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .social-footer span {
+            color: #f1c40f; /* Highlighted color for the @ihur_app handle */
+        }
+
         @media (max-width: 767px) {
             body {
-                background-image: none; /* Remove background image for mobile */
+                background-image: none;
             }
             .gfm-container {
                 top: 50%;
@@ -148,6 +164,9 @@
     </div>
     <div class="gfm-container">
         <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
+    </div>
+    <div class="social-footer">
+        Follow us on X, TikTok, Instagram - <span>@ihur_app</span>
     </div>
     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     <script>
