@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+this is my code ) <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,14 +9,17 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #3498db;
+            background-image: url('favicon.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Lato, "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
             overflow: hidden;
-            text-align: center;
         }
 
         .loader-container {
@@ -39,7 +42,7 @@
             width: 12px;
             height: 12px;
             margin: 2px;
-            background-color: #4285f4;
+            background-color: #fff;
             border-radius: 50%;
             animation: apple-spinner 1.2s linear infinite;
         }
@@ -71,34 +74,24 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #202124;
-        }
-
-        .content img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 40px;
-        }
-
-        .content h1 {
-            font-size: 48px;
-            font-weight: 400;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            font-size: 18px;
-            color: #5f6368;
-            margin-bottom: 40px;
+            color: white;
         }
 
         .footer {
             position: fixed;
-            bottom: 20px;
-            font-size: 14px;
-            color: #5f6368;
-            text-align: center;
-            width: 100%;
+            top: 10px;
+            right: 10px;
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer .trademark {
+            margin-left: 5px;
+            font-size: 12px;
+            vertical-align: super;
         }
 
         .gfm-container {
@@ -107,12 +100,36 @@
             right: 20px;
             z-index: 1000;
             padding: 10px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .gfm-embed {
+            width: 100%;
+            height: auto;
+        }
+
+        .social-footer {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            font-size: 14px;
+            color: white;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.6); /* Optional: Background for better readability */
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .social-footer span {
+            color: #f1c40f; /* Highlighted color for the @ihur_app handle */
         }
 
         @media (max-width: 767px) {
+            body {
+                background-image: none;
+            }
             .gfm-container {
                 top: 50%;
                 left: 50%;
@@ -139,16 +156,17 @@
         </div>
     </div>
     <div class="content">
-        <!-- Main content with image similar to Google Meet -->
-        <img src="your-image-here.jpg" alt="Coming Soon Image">
-        <h1>Coming Soon...</h1>
-        <p>We're working hard to bring you something amazing. Stay tuned!</p>
+        <!-- Main content goes here -->
     </div>
     <div class="footer">
-        ihur.com &reg;
+        ihur.com
+        <div class="trademark">&reg;</div>
     </div>
     <div class="gfm-container">
         <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
+    </div>
+    <div class="social-footer">
+        Follow us on X, TikTok, Instagram - <span>@ihur_app</span>
     </div>
     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     <script>
