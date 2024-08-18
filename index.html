@@ -9,12 +9,17 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #3498db;
+            background-image: url('favicon.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333;
+            position: relative;
+            overflow: hidden;
         }
 
         .loader-container {
@@ -23,7 +28,7 @@
             align-items: center;
             width: 100%;
             height: 100%;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9);
         }
 
         .spinner {
@@ -47,42 +52,72 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 20px;
             text-align: center;
             color: #555;
         }
 
-        .footer {
+        .footer, .gfm-container, .social-footer {
             position: fixed;
             bottom: 20px;
             right: 20px;
+            color: #fff;
             font-size: 14px;
-            color: #999;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            text-align: center;
+            width: 250px;
+        }
+
+        .footer {
+            bottom: 100px; /* Adjust placement above the GoFundMe container */
         }
 
         .gfm-container {
-            position: fixed;
             bottom: 20px;
-            left: 20px;
-            padding: 10px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .gfm-embed {
-            width: 300px;
-            height: 300px;
+            width: 100%;
+            height: auto;
+        }
+
+        .social-footer {
+            left: 20px;
+            right: auto;
+            bottom: 20px;
         }
 
         @media (max-width: 767px) {
-            .gfm-container {
-                bottom: auto;
-                top: 20px;
+            body {
+                background-image: none;
+            }
+            .footer, .gfm-container, .social-footer {
+                width: 90%;
                 left: 50%;
                 transform: translateX(-50%);
-                width: 90%;
+                text-align: center;
+                bottom: 20px;
+                padding: 10px;
+            }
+
+            .footer {
+                bottom: 80px;
+            }
+
+            .gfm-container {
+                bottom: 20px;
+            }
+
+            .social-footer {
+                bottom: 140px;
+                left: 50%;
+                transform: translateX(-50%);
+                right: auto;
             }
         }
     </style>
@@ -100,6 +135,9 @@
     </div>
     <div class="gfm-container">
         <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
+    </div>
+    <div class="social-footer">
+        Follow us on X, TikTok, Instagram - <span>@ihur_app</span>
     </div>
     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     <script>
