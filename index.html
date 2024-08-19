@@ -4,171 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon...</title>
-    <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon.png" type="image/png">
     <style>
         body, html {
             height: 100%;
             margin: 0;
             padding: 0;
-            background-color: #2C3E50; /* Dark blue background similar to meet.com */
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background-color: #ffffff; /* White background for simplicity */
+            font-family: Arial, Helvetica, sans-serif; /* Simple, modern font */
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #ffffff;
             text-align: center;
-            position: relative;
+            color: #333; /* Dark gray text color */
         }
 
-        .content {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .container {
+            max-width: 500px;
             padding: 20px;
         }
 
+        .container img {
+            width: 40px; /* Smaller favicon like on meet.com */
+            height: 40px;
+            margin-bottom: 20px;
+        }
+
         h1 {
-            font-size: 48px;
+            font-size: 36px; /* Large, central heading */
             margin-bottom: 20px;
         }
 
         p {
             font-size: 18px;
             margin-bottom: 40px;
-            max-width: 600px;
-            line-height: 1.6;
-        }
-
-        .footer {
-            position: fixed;
-            bottom: 10px;
-            text-align: center;
-            width: 100%;
-            font-size: 14px;
-            color: #ffffff;
-        }
-
-        .apple-spinner {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 64px;
-            height: 64px;
-            margin: 0 auto 40px auto;
-        }
-
-        .apple-spinner div {
-            width: 12px;
-            height: 12px;
-            margin: 2px;
-            background-color: #fff;
-            border-radius: 50%;
-            animation: apple-spinner 1.2s linear infinite;
-        }
-
-        .apple-spinner div:nth-child(1) { animation-delay: -1.1s; }
-        .apple-spinner div:nth-child(2) { animation-delay: -1s; }
-        .apple-spinner div:nth-child(3) { animation-delay: -0.9s; }
-        .apple-spinner div:nth-child(4) { animation-delay: -0.8s; }
-        .apple-spinner div:nth-child(5) { animation-delay: -0.7s; }
-        .apple-spinner div:nth-child(6) { animation-delay: -0.6s; }
-        .apple-spinner div:nth-child(7) { animation-delay: -0.5s; }
-        .apple-spinner div:nth-child(8) { animation-delay: -0.4s; }
-
-        @keyframes apple-spinner {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(0.5);
-                opacity: 0.5;
-            }
-        }
-
-        .social-footer {
-            position: fixed;
-            bottom: 10px;
-            left: 10px;
-            font-size: 14px;
-            color: #ffffff;
-            font-weight: bold;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-
-        .social-footer span {
-            color: #f1c40f; /* Highlighted color for the @ihur_app handle */
+            color: #666; /* Lighter gray for paragraph text */
         }
 
         .gfm-container {
-            position: fixed;
-            bottom: 80px;
-            right: 10px;
-            z-index: 1000;
+            margin-top: 20px;
+            max-width: 100%;
+            background-color: #f9f9f9; /* Light background for the GoFundMe widget */
             padding: 10px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 320px;
-            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .gfm-embed {
-            width: 100%;
-            height: auto;
+        .footer {
+            font-size: 14px;
+            color: #999;
+            margin-top: 40px;
         }
 
         @media (max-width: 767px) {
-            .content {
-                padding: 10px;
-            }
             h1 {
-                font-size: 36px;
+                font-size: 28px;
             }
             p {
                 font-size: 16px;
-            }
-            .gfm-container {
-                position: static;
-                margin: 20px auto;
-                bottom: auto;
-                right: auto;
-                max-width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <div class="content">
-        <img src="favicon.png" alt="Favicon" width="50" height="50" style="margin-bottom: 20px;">
-        <div class="apple-spinner">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+    <div class="container">
+        <img src="favicon.png" alt="Favicon">
         <h1>Coming Soon...</h1>
-        <p>We are working hard to give you a great experience. Stay tuned!</p>
-    </div>
-    <div class="footer">
-        ihur.com &reg; | Follow us on X, TikTok, Instagram - <span>@ihur_app</span>
-    </div>
-    <div class="gfm-container">
-        <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
+        <p>We're working on something exciting. Stay tuned for updates!</p>
+        <div class="gfm-container">
+            <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
+        </div>
+        <div class="footer">
+            © ihur.com | Follow us on X, TikTok, Instagram - @ihur_app
+        </div>
     </div>
     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
-    <script>
-        window.addEventListener('load', function() {
-            document.querySelector('.apple-spinner').style.display = 'none';
-        });
-    </script>
 </body>
 </html>
