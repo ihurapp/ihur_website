@@ -61,6 +61,14 @@
             font-size: 16px;
             font-weight: bold; /* Bold text for ihur.com */
             color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .trademark {
+            font-size: 12px;
+            vertical-align: super;
+            margin-left: 2px;
         }
 
         @media (max-width: 767px) {
@@ -77,13 +85,18 @@
                 right: auto;
                 max-width: 100%;
             }
+            .footer {
+                font-size: 14px;
+            }
+            .trademark {
+                font-size: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="footer">
-        ihur
-        <div class="trademark">&reg;</div>
+        ihur<span class="trademark">&reg;</span>
     </div>
     <div class="container">
         <img src="favicon.png" alt="Favicon">
