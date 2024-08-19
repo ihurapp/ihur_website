@@ -17,6 +17,7 @@
             align-items: center;
             text-align: center;
             color: #333; /* Dark gray text color */
+            position: relative;
         }
 
         .container {
@@ -42,18 +43,23 @@
         }
 
         .gfm-container {
-            margin-top: 20px;
-            max-width: 100%;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            max-width: 320px;
             background-color: #f9f9f9; /* Light background for the GoFundMe widget */
             padding: 10px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
         }
 
         .footer {
+            position: fixed;
+            top: 10px;
+            right: 10px;
             font-size: 14px;
-            color: #999;
-            margin-top: 40px;
+            color: #333;
         }
 
         @media (max-width: 767px) {
@@ -63,20 +69,27 @@
             p {
                 font-size: 16px;
             }
+            .gfm-container {
+                position: static;
+                margin: 20px auto;
+                bottom: auto;
+                right: auto;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="footer">
+        ihur.com
+    </div>
     <div class="container">
         <img src="favicon.png" alt="Favicon">
         <h1>Coming Soon...</h1>
         <p>We're working on something exciting. Stay tuned for updates!</p>
-        <div class="gfm-container">
-            <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
-        </div>
-        <div class="footer">
-            © ihur.com | Follow us on X, TikTok, Instagram - @ihur_app
-        </div>
+    </div>
+    <div class="gfm-container">
+        <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
     </div>
     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
 </body>
