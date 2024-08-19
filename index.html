@@ -18,16 +18,19 @@
             text-align: center;
             color: #333;
             position: relative;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         .container {
             max-width: 500px;
             padding: 20px;
+            box-sizing: border-box; /* Ensure padding doesn't affect container width */
         }
 
         .container img {
-            width: 520px;
-            height: 400px;
+            width: 100%; /* Ensure image scales with the container */
+            max-width: 520px;
+            height: auto; /* Maintain aspect ratio */
             margin-bottom: 0px;
         }
 
