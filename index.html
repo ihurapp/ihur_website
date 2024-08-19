@@ -47,9 +47,9 @@
             padding: 10px 20px;
             font-size: 16px;
             font-weight: bold;
-            color: #fff;
-            background-color: #007bff; /* Bootstrap primary color */
-            border: none;
+            color: #333; /* Color same as iHur text */
+            background-color: #f4f0ed; /* Background color same as body background */
+            border: 2px solid #333; /* Border same as iHur text */
             border-radius: 5px;
             cursor: pointer;
             margin-bottom: 20px;
@@ -57,7 +57,7 @@
         }
 
         .button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: #e0dcd6; /* Slightly darker background on hover */
         }
 
         .gfm-container {
@@ -71,6 +71,16 @@
             border-radius: 6px; /* Smaller border radius */
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Reduced shadow */
             z-index: 1000;
+            overflow: hidden; /* Ensure close button stays within the container */
+        }
+
+        .gfm-container .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            color: #333; /* Color same as iHur text */
         }
 
         .footer {
@@ -91,19 +101,19 @@
         }
 
         @media (max-width: 767px) {
+            .gfm-container {
+                position: fixed;
+                top: 20px; /* Centered vertically */
+                left: 50%;
+                transform: translateX(-50%); /* Center horizontally */
+                max-width: 90%; /* Full width on mobile */
+                padding: 10px; /* Reduced padding for mobile */
+            }
             h1 {
                 font-size: 24px; /* Slightly smaller heading on mobile */
             }
             p {
                 font-size: 16px; /* Slightly smaller text on mobile */
-            }
-            .gfm-container {
-                position: static; /* Make it static on mobile */
-                margin: 20px auto;
-                bottom: auto;
-                right: auto;
-                max-width: 100%; /* Full width on mobile */
-                padding: 8px; /* Reduced padding */
             }
             .footer {
                 font-size: 14px; /* Smaller font size on mobile */
@@ -126,6 +136,7 @@
         <a href="#" class="button" id="donate-btn">Donate</a> <!-- Donate Button -->
     </div>
     <div class="gfm-container" id="gfm-container">
+        <span class="close-btn" id="close-btn">&times;</span> <!-- Close button -->
         <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
     </div>
     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
@@ -135,6 +146,12 @@
             event.preventDefault(); // Prevent default button action
             var gfmContainer = document.getElementById('gfm-container');
             gfmContainer.style.display = 'block'; // Show the GoFundMe container
+        });
+
+        // JavaScript to handle the close button click
+        document.getElementById('close-btn').addEventListener('click', function() {
+            var gfmContainer = document.getElementById('gfm-container');
+            gfmContainer.style.display = 'none'; // Hide the GoFundMe container
         });
     </script>
 </body>
