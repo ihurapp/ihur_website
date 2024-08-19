@@ -63,9 +63,10 @@
         .gfm-container {
             display: none; /* Hidden by default */
             position: fixed;
-            right: 10px; /* Reduced padding */
-            bottom: 10px; /* Reduced padding */
-            max-width: 250px; /* Smaller maximum width */
+            right: 10px; /* Padding from the right */
+            bottom: 10px; /* Padding from the bottom */
+            width: 250px; /* Default width */
+            height: 300px; /* Default height */
             background-color: #f9f9f9; /* Light background for the GoFundMe widget */
             padding: 8px; /* Reduced padding */
             border-radius: 6px; /* Smaller border radius */
@@ -106,19 +107,24 @@
                 top: 20px; /* Centered vertically */
                 left: 50%;
                 transform: translateX(-50%); /* Center horizontally */
-                max-width: 90%; /* Wider width on mobile */
-                padding: 10px; /* Reduced padding for mobile */
+                width: 90vw; /* Wider width on mobile */
+                height: 300px; /* Reduced height on mobile */
+                padding: 10px; /* Padding adjustment for mobile */
             }
+
             h1 {
                 font-size: 24px; /* Slightly smaller heading on mobile */
             }
+
             p {
                 font-size: 16px; /* Slightly smaller text on mobile */
             }
+
             .footer {
                 font-size: 14px; /* Smaller font size on mobile */
                 left: 10px; /* Adjusted left padding on mobile */
             }
+
             .trademark {
                 font-size: 10px; /* Smaller trademark on mobile */
             }
