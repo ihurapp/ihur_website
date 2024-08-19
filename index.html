@@ -10,13 +10,13 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            background-color: #f4f0ed; /* Light yellow background color matching meet.com */
-            font-family: Arial, Helvetica, sans-serif; /* Simple, modern font */
+            background-color: #f4f0ed;
+            font-family: Arial, Helvetica, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: #333; /* Dark gray text color for contrast */
+            color: #333;
             position: relative;
         }
 
@@ -26,20 +26,24 @@
         }
 
         .container img {
-            width: 540px; /* Smaller favicon */
+            width: 540px;
             height: 400px;
             margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 36px; /* Large, central heading */
+            font-size: 48px; /* Larger text size */
             margin-bottom: 20px;
+            letter-spacing: -1.5px; /* Closer letter spacing */
+            line-height: 1.2; /* Adjusted line height */
+            text-align: center; /* Ensure the text is centered */
+            width: 100%; /* Make sure the text fits the width */
         }
 
         p {
             font-size: 18px;
             margin-bottom: 40px;
-            color: #666; /* Lighter gray for paragraph text */
+            color: #666;
         }
 
         .button {
@@ -47,35 +51,35 @@
             padding: 12px 24px;
             font-size: 16px;
             font-weight: bold;
-            color: #fff; /* White text */
-            background-color: #999999; /* Background color as specified */
+            color: #fff;
+            background-color: #999999;
             border: none;
-            border-radius: 30px; /* Rounded corners */
+            border-radius: 30px;
             cursor: pointer;
             text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.3s ease;
             margin-bottom: 20px;
         }
 
         .button:hover {
-            background-color: #999999; /* Ensure button color stays the same on hover */
-            transform: translateY(-2px); /* Slight lift effect */
+            background-color: #999999;
+            transform: translateY(-2px);
         }
 
         .gfm-container {
-            display: none; /* Hidden by default */
+            display: none;
             position: fixed;
-            right: 10px; /* Padding from the right */
-            bottom: 10px; /* Padding from the bottom */
-            width: 300px; /* Default width */
-            height: 460px; /* Default height */
-            background-color: #f9f9f9; /* Light background for the GoFundMe widget */
-            padding: 8px; /* Reduced padding */
-            border-radius: 6px; /* Smaller border radius */
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+            right: 10px;
+            bottom: 10px;
+            width: 300px;
+            height: 460px;
+            background-color: #f9f9f9;
+            padding: 8px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            overflow: hidden; /* Ensure close button stays within the container */
+            overflow: hidden;
         }
 
         .gfm-container .close-btn {
@@ -84,68 +88,70 @@
             right: 10px;
             font-size: 35px;
             cursor: pointer;
-            color: #333; /* Color same as iHur text */
+            color: #333;
         }
 
         .footer {
             position: fixed;
-            top: 20px; /* Reduced top padding */
-            left: 25px; /* Reduced left padding */
-            font-size: 18px; /* Slightly smaller font size */
-            font-weight: bold; /* Bold text for iHur */
-            color: #333; /* Dark gray text color for contrast */
+            top: 20px;
+            left: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
             display: flex;
             align-items: center;
         }
 
-       .trademark {
-            font-size: 14px; /* Slightly larger trademark */
+        .trademark {
+            font-size: 14px;
             vertical-align: super;
             margin-left: 2px;
-        } 
+        }
 
         .bottom-text {
             position: fixed;
-            bottom: 10px; /* Positioned at the bottom */
-            left: 25px; /* Adjusted left padding */
-            font-size: 18px; /* Same size as the footer text */
-            color: #333; /* Same color as the footer text */
+            bottom: 10px;
+            left: 25px;
+            font-size: 18px;
+            color: #333;
             display: flex;
             flex-direction: column;
-            gap: 5px; /* Spacing between texts */
+            gap: 5px;
         }
 
         @media (max-width: 767px) {
             .gfm-container {
                 position: fixed;
-                top: 50px; /* Centered vertically */
+                top: 50px;
                 left: 50%;
-                transform: translateX(-50%); /* Center horizontally */
-                width: 90vw; /* Wider width on mobile */
-                height: 450px; /* Reduced height on mobile */
-                padding: 10px; /* Padding adjustment for mobile */
+                transform: translateX(-50%);
+                width: 90vw;
+                height: 450px;
+                padding: 10px;
             }
 
             h1 {
-                font-size: 24px; /* Slightly smaller heading on mobile */
+                font-size: 32px; /* Adjusted larger text size for mobile */
+                letter-spacing: -1px; /* Adjusted letter spacing for mobile */
+                line-height: 1.1; /* Adjusted line height for mobile */
             }
 
             p {
-                font-size: 16px; /* Slightly smaller text on mobile */
+                font-size: 16px;
             }
 
             .footer {
-                font-size: 18px; /* Slightly larger font size on mobile */
-                left: 20px; /* Adjusted left padding on mobile */
+                font-size: 18px;
+                left: 20px;
             }
 
             .trademark {
-                font-size: 14px; /* Larger trademark on mobile */
-            } 
+                font-size: 14px;
+            }
 
             .bottom-text {
-                font-size: 16px; /* Slightly smaller text size on mobile */
-                left: 10px; /* Adjusted left padding on mobile */
+                font-size: 16px;
+                left: 10px;
             }
         }
     </style>
@@ -163,25 +169,23 @@
         <img src="favicon.png" alt="Favicon">
         <h1>Your Voice, Our Platform, Unlimited Freedom.</h1>
         <p>Coming Soon: Stay Tuned for Updates.</p>
-        <a href="#" class="button" id="donate-btn">Donate</a> <!-- Donate Button -->
+        <a href="#" class="button" id="donate-btn">Donate</a>
     </div>
     <div class="gfm-container" id="gfm-container">
-        <span class="close-btn" id="close-btn">&times;</span> <!-- Close button -->
+        <span class="close-btn" id="close-btn">&times;</span>
         <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
     </div>
     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     <script>
-        // JavaScript to handle the button click
         document.getElementById('donate-btn').addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent default button action
+            event.preventDefault();
             var gfmContainer = document.getElementById('gfm-container');
-            gfmContainer.style.display = 'block'; // Show the GoFundMe container
+            gfmContainer.style.display = 'block';
         });
 
-        // JavaScript to handle the close button click
         document.getElementById('close-btn').addEventListener('click', function() {
             var gfmContainer = document.getElementById('gfm-container');
-            gfmContainer.style.display = 'none'; // Hide the GoFundMe container
+            gfmContainer.style.display = 'none';
         });
     </script>
 </body>
