@@ -10,7 +10,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #f4f0ed;/* Light yellow background color matching meet.com */
+    background-color: #f4f0ed; /* Light yellow background color matching meet.com */
     font-family: Arial, Helvetica, sans-serif; /* Simple, modern font */
     display: flex;
     justify-content: center;
@@ -20,58 +20,80 @@
     position: relative;
 }
 
+.container {
+    max-width: 500px;
+    padding: 20px;
+}
 
+.container img {
+    width: 40px; /* Smaller favicon */
+    height: 40px;
+    margin-bottom: 20px;
+}
 
-        .container {
-            max-width: 500px;
-            padding: 20px;
-        }
+h1 {
+    font-size: 36px; /* Large, central heading */
+    margin-bottom: 20px;
+}
 
-        .container img {
-            width: 40px; /* Smaller favicon */
-            height: 40px;
-            margin-bottom: 20px;
-        }
+p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666; /* Lighter gray for paragraph text */
+}
 
-        h1 {
-            font-size: 36px; /* Large, central heading */
-            margin-bottom: 20px;
-        }
+.gfm-container {
+    position: fixed;
+    right: 10px; /* Reduced padding */
+    bottom: 10px; /* Reduced padding */
+    max-width: 250px; /* Smaller maximum width for mobile */
+    background-color: #f9f9f9; /* Light background for the GoFundMe widget */
+    padding: 8px; /* Reduced padding */
+    border-radius: 6px; /* Smaller border radius */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+    z-index: 1000;
+}
 
-        p {
-            font-size: 18px;
-            margin-bottom: 40px;
-            color: #666; /* Lighter gray for paragraph text */
-        }
+.footer {
+    position: fixed;
+    top: 10px; /* Reduced top padding */
+    left: 15px; /* Reduced left padding */
+    font-size: 18px; /* Slightly smaller font size */
+    font-weight: bold; /* Bold text for iHur */
+    color: #333; /* Dark gray text color for contrast */
+    display: flex;
+    align-items: center;
+}
 
-        .gfm-container {
-            position: fixed;
-            right: 20px;
-            bottom: 20px;
-            max-width: 320px;
-            background-color: #f9f9f9; /* Light background for the GoFundMe widget */
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
+.trademark {
+    font-size: 10px; /* Slightly smaller trademark */
+    vertical-align: super;
+    margin-left: 2px;
+}
 
-        .footer {
-            position: fixed;
-            top: 20px;
-            left: 25px; /* Adds padding from the left side */
-            font-size: 20px;
-            font-weight: bold; /* Bold text for iHur */
-            color: #333; /* Dark gray text color for contrast */
-            display: flex;
-            align-items: center;
-        }
-
-        .trademark {
-            font-size: 12px;
-            vertical-align: super;
-            margin-left: 2px;
-        }
+@media (max-width: 767px) {
+    h1 {
+        font-size: 24px; /* Slightly smaller heading on mobile */
+    }
+    p {
+        font-size: 16px; /* Slightly smaller text on mobile */
+    }
+    .gfm-container {
+        position: static; /* Make it static on mobile */
+        margin: 20px auto;
+        bottom: auto;
+        right: auto;
+        max-width: 100%; /* Full width on mobile */
+        padding: 8px; /* Reduced padding */
+    }
+    .footer {
+        font-size: 14px; /* Smaller font size on mobile */
+        left: 10px; /* Adjusted left padding on mobile */
+    }
+    .trademark {
+        font-size: 10px; /* Smaller trademark on mobile */
+    }
+}
 
         @media (max-width: 767px) {
             h1 {
