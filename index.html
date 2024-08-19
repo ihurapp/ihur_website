@@ -44,20 +44,23 @@
 
         .button {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 24px;
             font-size: 16px;
             font-weight: bold;
-            color: #333; /* Color same as iHur text */
-            background-color: #f4f0ed; /* Background color same as body background */
-            border: 2px solid #333; /* Border same as iHur text */
-            border-radius: 5px;
+            color: #fff; /* White text */
+            background: linear-gradient(45deg, #006d77, #83c5be); /* Gradient background */
+            border: none;
+            border-radius: 30px; /* Rounded corners */
             cursor: pointer;
-            margin-bottom: 20px;
             text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
+            margin-bottom: 20px;
         }
 
         .button:hover {
-            background-color: #e0dcd6; /* Slightly darker background on hover */
+            background: linear-gradient(45deg, #005f6a, #71b0a6); /* Darker gradient on hover */
+            transform: translateY(-2px); /* Slight lift effect */
         }
 
         .gfm-container {
