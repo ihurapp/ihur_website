@@ -6,115 +6,111 @@
     <title>Coming Soon...</title>
     <link rel="icon" href="favicon.png" type="image/png">
     <style>
- body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f0ed; /* Light yellow background color matching meet.com */
-    font-family: Arial, Helvetica, sans-serif; /* Simple, modern font */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #333; /* Dark gray text color for contrast */
-    position: relative;
-}
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f0ed; /* Light yellow background color matching meet.com */
+            font-family: Arial, Helvetica, sans-serif; /* Simple, modern font */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #333; /* Dark gray text color for contrast */
+            position: relative;
+        }
 
-.container {
-    max-width: 500px;
-    padding: 20px;
-}
+        .container {
+            max-width: 500px;
+            padding: 20px;
+        }
 
-.container img {
-    width: 40px; /* Smaller favicon */
-    height: 40px;
-    margin-bottom: 20px;
-}
+        .container img {
+            width: 40px; /* Smaller favicon */
+            height: 40px;
+            margin-bottom: 20px;
+        }
 
-h1 {
-    font-size: 36px; /* Large, central heading */
-    margin-bottom: 20px;
-}
+        h1 {
+            font-size: 36px; /* Large, central heading */
+            margin-bottom: 20px;
+        }
 
-p {
-    font-size: 18px;
-    margin-bottom: 40px;
-    color: #666; /* Lighter gray for paragraph text */
-}
+        p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #666; /* Lighter gray for paragraph text */
+        }
 
-.gfm-container {
-    position: fixed;
-    right: 10px; /* Reduced padding */
-    bottom: 10px; /* Reduced padding */
-    max-width: 250px; /* Smaller maximum width for mobile */
-    background-color: #f9f9f9; /* Light background for the GoFundMe widget */
-    padding: 8px; /* Reduced padding */
-    border-radius: 6px; /* Smaller border radius */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Reduced shadow */
-    z-index: 1000;
-}
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff; /* Bootstrap primary color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
 
-.footer {
-    position: fixed;
-    top: 10px; /* Reduced top padding */
-    left: 15px; /* Reduced left padding */
-    font-size: 18px; /* Slightly smaller font size */
-    font-weight: bold; /* Bold text for iHur */
-    color: #333; /* Dark gray text color for contrast */
-    display: flex;
-    align-items: center;
-}
+        .button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
 
-.trademark {
-    font-size: 10px; /* Slightly smaller trademark */
-    vertical-align: super;
-    margin-left: 2px;
-}
+        .gfm-container {
+            display: none; /* Hidden by default */
+            position: fixed;
+            right: 10px; /* Reduced padding */
+            bottom: 10px; /* Reduced padding */
+            max-width: 250px; /* Smaller maximum width */
+            background-color: #f9f9f9; /* Light background for the GoFundMe widget */
+            padding: 8px; /* Reduced padding */
+            border-radius: 6px; /* Smaller border radius */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+            z-index: 1000;
+        }
 
-@media (max-width: 767px) {
-    h1 {
-        font-size: 24px; /* Slightly smaller heading on mobile */
-    }
-    p {
-        font-size: 16px; /* Slightly smaller text on mobile */
-    }
-    .gfm-container {
-        position: static; /* Make it static on mobile */
-        margin: 20px auto;
-        bottom: auto;
-        right: auto;
-        max-width: 100%; /* Full width on mobile */
-        padding: 8px; /* Reduced padding */
-    }
-    .footer {
-        font-size: 14px; /* Smaller font size on mobile */
-        left: 10px; /* Adjusted left padding on mobile */
-    }
-    .trademark {
-        font-size: 10px; /* Smaller trademark on mobile */
-    }
-}
+        .footer {
+            position: fixed;
+            top: 10px; /* Reduced top padding */
+            left: 15px; /* Reduced left padding */
+            font-size: 18px; /* Slightly smaller font size */
+            font-weight: bold; /* Bold text for iHur */
+            color: #333; /* Dark gray text color for contrast */
+            display: flex;
+            align-items: center;
+        }
+
+        .trademark {
+            font-size: 10px; /* Slightly smaller trademark */
+            vertical-align: super;
+            margin-left: 2px;
+        }
 
         @media (max-width: 767px) {
             h1 {
-                font-size: 28px;
+                font-size: 24px; /* Slightly smaller heading on mobile */
             }
             p {
-                font-size: 16px;
+                font-size: 16px; /* Slightly smaller text on mobile */
             }
             .gfm-container {
-                position: static;
+                position: static; /* Make it static on mobile */
                 margin: 20px auto;
                 bottom: auto;
                 right: auto;
-                max-width: 100%;
+                max-width: 100%; /* Full width on mobile */
+                padding: 8px; /* Reduced padding */
             }
             .footer {
-                font-size: 14px;
-                left: 10px; /* Adjusts the padding on smaller screens */
+                font-size: 14px; /* Smaller font size on mobile */
+                left: 10px; /* Adjusted left padding on mobile */
             }
             .trademark {
-                font-size: 12px;
+                font-size: 10px; /* Smaller trademark on mobile */
             }
         }
     </style>
@@ -127,10 +123,19 @@ p {
         <img src="favicon.png" alt="Favicon">
         <h1>Coming Soon...</h1>
         <p>We're working on something exciting. Stay tuned for updates!</p>
+        <a href="#" class="button" id="donate-btn">Donate</a> <!-- Donate Button -->
     </div>
-    <div class="gfm-container">
+    <div class="gfm-container" id="gfm-container">
         <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
     </div>
     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+    <script>
+        // JavaScript to handle the button click
+        document.getElementById('donate-btn').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default button action
+            var gfmContainer = document.getElementById('gfm-container');
+            gfmContainer.style.display = 'block'; // Show the GoFundMe container
+        });
+    </script>
 </body>
 </html>
