@@ -42,7 +42,7 @@
             color: #666; /* Lighter gray for paragraph text */
         }
 
-       .button {
+        .button {
             display: inline-block;
             padding: 12px 24px;
             font-size: 16px;
@@ -59,7 +59,7 @@
         }
 
         .button:hover {
-        background-color: #999999; /* Background color as specified
+            background-color: #999999; /* Ensure button color stays the same on hover */
             transform: translateY(-2px); /* Slight lift effect */
         }
 
@@ -99,9 +99,20 @@
         }
 
         .trademark {
-            font-size: 10px; /* Slightly smaller trademark */
+            font-size: 14px; /* Slightly larger trademark */
             vertical-align: super;
             margin-left: 2px;
+        }
+
+        .bottom-text {
+            position: fixed;
+            bottom: 10px; /* Positioned at the bottom */
+            left: 25px; /* Adjusted left padding */
+            font-size: 18px; /* Same size as the footer text */
+            color: #333; /* Same color as the footer text */
+            display: flex;
+            flex-direction: column;
+            gap: 5px; /* Spacing between texts */
         }
 
         @media (max-width: 767px) {
@@ -124,12 +135,17 @@
             }
 
             .footer {
-                font-size: 14px; /* Smaller font size on mobile */
+                font-size: 20px; /* Slightly larger font size on mobile */
                 left: 10px; /* Adjusted left padding on mobile */
             }
 
             .trademark {
-                font-size: 10px; /* Smaller trademark on mobile */
+                font-size: 16px; /* Larger trademark on mobile */
+            }
+
+            .bottom-text {
+                font-size: 16px; /* Slightly smaller text size on mobile */
+                left: 10px; /* Adjusted left padding on mobile */
             }
         }
     </style>
@@ -137,6 +153,11 @@
 <body>
     <div class="footer">
         ihur<span class="trademark">&reg;</span>
+    </div>
+    <div class="bottom-text">
+        <div>text1</div>
+        <div>text2</div>
+        <div>text3</div>
     </div>
     <div class="container">
         <img src="favicon.png" alt="Favicon">
