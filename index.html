@@ -97,13 +97,13 @@
 
         .footer {
             position: fixed;
-            bottom: 20px;
+            top: 20px;
             left: 25px;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
             color: #333;
             display: flex;
-            flex-direction: column;
+            align-items: center;
         }
 
         .footer .trademark {
@@ -113,8 +113,10 @@
         }
 
         .social-text {
+            position: fixed;
+            bottom: 20px;
+            left: 25px;
             font-size: 14px;
-            margin-top: 5px;
             color: #666;
         }
 
@@ -140,12 +142,13 @@
             }
 
             .footer {
-                font-size: 14px;
+                font-size: 18px;
                 left: 20px;
             }
 
             .social-text {
                 font-size: 12px;
+                left: 20px;
             }
         }
     </style>
@@ -153,7 +156,6 @@
 <body>
     <div class="footer">
         ihur<span class="trademark">&reg;</span>
-        <div class="social-text">Follow us on X, TikTok, and Instagram - @ihur_app</div>
     </div>
     <div class="container">
         <img src="favicon.png" alt="Favicon">
@@ -164,6 +166,9 @@
     <div class="gfm-container" id="gfm-container">
         <span class="close-btn" id="close-btn">&times;</span>
         <div class="gfm-embed" data-url="https://www.gofundme.com/f/amplify-freedom-fund-our-new-social-media-platform/widget/large?sharesheet=dashboard&attribution_id=sl:a0bc6cfd-222e-4cd9-bc47-0a7c0bbd29fe"></div>
+    </div>
+    <div class="social-text">
+        Follow us on X, TikTok, and Instagram - @ihur_app
     </div>
     <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
     <script>
