@@ -22,7 +22,7 @@
         }
 
         .container {
-             width: 100%; /* Ensure image scales with the container */
+            width: 100%; /* Ensure image scales with the container */
             max-width: 500px;
             padding: 20px;
             box-sizing: border-box; /* Ensure padding doesn't affect container width */
@@ -97,19 +97,25 @@
 
         .footer {
             position: fixed;
-            top: 20px;
+            bottom: 20px;
             left: 25px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             color: #333;
             display: flex;
-            align-items: center;
+            flex-direction: column;
         }
 
-        .trademark {
+        .footer .trademark {
             font-size: 14px;
             vertical-align: super;
             margin-left: 2px;
+        }
+
+        .social-text {
+            font-size: 14px;
+            margin-top: 5px;
+            color: #666;
         }
 
         @media (max-width: 767px) {
@@ -134,12 +140,12 @@
             }
 
             .footer {
-                font-size: 18px;
+                font-size: 14px;
                 left: 20px;
             }
 
-            .trademark {
-                font-size: 14px;
+            .social-text {
+                font-size: 12px;
             }
         }
     </style>
@@ -147,6 +153,7 @@
 <body>
     <div class="footer">
         ihur<span class="trademark">&reg;</span>
+        <div class="social-text">Follow us on X, TikTok, and Instagram - @ihur_app</div>
     </div>
     <div class="container">
         <img src="favicon.png" alt="Favicon">
