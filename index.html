@@ -32,13 +32,16 @@
             position: relative;
             width: 100%;
             max-width: 520px;
+            height: auto; /* Maintain aspect ratio */
             overflow: hidden; /* Hide overflow to ensure blur effect stays within bounds */
         }
 
         .image-wrapper img {
-            width: 100%; /* Ensure image scales with the container */
-            height: auto; /* Maintain aspect ratio */
+            width: 100%;
+            height: auto;
             display: block;
+            position: relative;
+            z-index: 1;
         }
 
         .image-wrapper::before {
@@ -50,8 +53,8 @@
             height: 40%; /* Adjust the height of the blur effect */
             background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.7) 100%);
             filter: blur(10px); /* Adjust the blur intensity */
+            z-index: 2;
             pointer-events: none;
-            z-index: 1;
         }
 
         h1 {
