@@ -28,12 +28,14 @@
             box-sizing: border-box; /* Ensure padding doesn't affect container width */
         }
 
-        .container img {
-            width: 100%; /* Ensure image scales with the container */
-            max-width: 520px;
-            height: auto; /* Maintain aspect ratio */
-            margin-bottom: 0px;
-        }
+       .container img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin-bottom: 0px;
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.2)); /* Adds shadow around the visible image */
+}
+
 
         h1 {
             font-size: 48px; /* Larger text size */
