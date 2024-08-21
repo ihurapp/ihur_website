@@ -102,19 +102,18 @@
         }
 
         .footer {
-    position: fixed;
-    top: 20px;
-    left: 25px;
-    font-size: 24px; /* Adjust font size */
-    font-weight: bold; /* Adjust font weight */
-    color: #333; /* Text color */
-    display: flex;
-    align-items: center;
-    text-transform: lowercase; /* Optional: Transform text to uppercase */
-    letter-spacing: 1px; /* Optional: Adjust letter spacing */
-    font-family: 'Helvetica Neue', sans-serif; /* Optional: Change font family */
-}
-
+            position: fixed;
+            top: 20px;
+            left: 25px;
+            font-size: 24px; /* Default font size for larger screens */
+            font-weight: bold; /* Font weight */
+            color: #333; /* Text color */
+            display: flex;
+            align-items: center;
+            text-transform: lowercase; /* Optional: Transform text to lowercase */
+            letter-spacing: 1px; /* Optional: Adjust letter spacing */
+            font-family: 'Helvetica Neue', sans-serif; /* Font family */
+        }
 
         .footer .trademark {
             font-size: 14px;
@@ -164,6 +163,17 @@
                 width: 90vw;
                 height: 450px;
                 padding: 10px;
+            }
+        }
+
+        /* Media query for larger screens */
+        @media (min-width: 768px) {
+            .footer {
+                font-size: 20px; /* Smaller font size for larger screens */
+            }
+
+            .footer .trademark {
+                font-size: 12px; /* Smaller trademark */
             }
         }
     </style>
