@@ -17,29 +17,33 @@
             align-items: center;
             color: #333;
             position: relative;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 500px;
             padding: 20px;
             box-sizing: border-box;
-            text-align: left;
+            text-align: center; /* Center the favicon image */
         }
 
         .container img {
             max-width: 250px;
             height: auto;
             margin-bottom: -40px;
+            display: block; /* Ensures image is centered */
+            margin-left: auto;
+            margin-right: auto;
             filter: drop-shadow(0px 10px 15px rgba(255, 255, 255, 0.8)); 
             mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
         }
 
         h1 {
-            font-size: 40px; /* Reduced font size */
+            font-size: 40px;
             margin-bottom: 20px;
             letter-spacing: -1.5px;
             line-height: 1.2;
+            text-align: left; /* Align text to the left while keeping the favicon centered */
         }
 
         h1 span {
