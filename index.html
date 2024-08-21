@@ -15,7 +15,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
             color: #333;
             position: relative;
             overflow-x: hidden; /* Prevent horizontal scroll */
@@ -24,25 +23,27 @@
         .container {
             max-width: 500px;
             padding: 20px;
-            box-sizing: border-box; /* Ensure padding doesn't affect container width */
+            box-sizing: border-box;
+            text-align: left;
         }
 
         .container img {
-            max-width: 250px; /* Increased size for larger screens */
+            max-width: 250px;
             height: auto;
             margin-bottom: -40px;
-            filter: drop-shadow(0px 10px 15px rgba(255, 255, 255, 0.8)); /* White shadow */
-            mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%); /* Fading the bottom */
+            filter: drop-shadow(0px 10px 15px rgba(255, 255, 255, 0.8)); 
+            mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
         }
 
         h1 {
-            font-size: 48px; /* Larger text size */
+            font-size: 40px; /* Reduced font size */
             margin-bottom: 20px;
-            letter-spacing: -1.5px; /* Closer letter spacing */
-            line-height: 1.2; /* Adjusted line height */
-            text-align: left; /* Left-align text */
-            width: 100%; /* Make sure the text fits the width */
-            white-space: nowrap; /* Prevent text from wrapping automatically */
+            letter-spacing: -1.5px;
+            line-height: 1.2;
+        }
+
+        h1 span {
+            display: block;
         }
 
         p {
@@ -68,7 +69,7 @@
         }
 
         .button:hover {
-            background-color: #999999;
+            background-color: #888888;
             transform: translateY(-2px);
         }
 
@@ -119,18 +120,18 @@
             left: 25px;
             font-size: 14px;
             color: #666;
-            z-index: 1000; /* Ensures it's above other elements */
+            z-index: 1000;
         }
 
         @media (max-width: 767px) {
             .container img {
-                max-width: 180px; /* Mobile size */
+                max-width: 180px;
             }
 
             h1 {
-                font-size: 32px; /* Adjusted larger text size for mobile */
-                letter-spacing: -1px; /* Adjusted letter spacing for mobile */
-                line-height: 1.1; /* Adjusted line height for mobile */
+                font-size: 32px;
+                letter-spacing: -1px;
+                line-height: 1.1;
             }
 
             p {
@@ -165,7 +166,10 @@
     </div>
     <div class="container">
         <img src="favicon.png" alt="Favicon">
-        <h1>Your Voice, Our Platform<br>Unlimited Freedom.</h1>
+        <h1>
+            <span>Your Voice, Our Platform</span>
+            <span>Unlimited Freedom.</span>
+        </h1>
         <p>Coming Soon: Stay Tuned for Updates.</p>
         <a href="#" class="button" id="donate-btn">Donate</a>
     </div>
